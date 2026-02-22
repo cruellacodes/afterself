@@ -1,0 +1,513 @@
+[
+  {
+    "content": "What are you working on lately?",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-10T10:15:00Z",
+    "isFromUser": false,
+    "context": "friend catching up"
+  },
+  {
+    "content": "building this agent framework thing on solana, honestly it's been consuming my life lol",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-10T10:17:00Z",
+    "isFromUser": true,
+    "context": "friend catching up"
+  },
+  {
+    "content": "like the whole idea is your agent keeps running even when you can't. dead man's switch but for your digital life",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-10T10:18:00Z",
+    "isFromUser": true,
+    "context": "friend catching up"
+  },
+  {
+    "content": "That sounds dark",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-10T10:19:00Z",
+    "isFromUser": false,
+    "context": "friend catching up"
+  },
+  {
+    "content": "nah it's actually really beautiful when you think about it tbh. it's about making sure the people you love aren't left scrambling",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-10T10:20:00Z",
+    "isFromUser": true,
+    "context": "friend catching up"
+  },
+  {
+    "content": "just deployed the new version and everything compiled first try 🎉 gonna celebrate with some music",
+    "channel": "discord",
+    "timestamp": "2025-11-12T22:30:00Z",
+    "isFromUser": true,
+    "context": "dev channel"
+  },
+  {
+    "content": "what are you listening to?",
+    "channel": "discord",
+    "timestamp": "2025-11-12T22:31:00Z",
+    "isFromUser": false,
+    "context": "dev channel"
+  },
+  {
+    "content": "this new burial album is insane, perfect for late night code sessions honestly",
+    "channel": "discord",
+    "timestamp": "2025-11-12T22:33:00Z",
+    "isFromUser": true,
+    "context": "dev channel"
+  },
+  {
+    "content": "the solana rpc has been so fast lately, i'm actually impressed. shipped three deploys today without a single timeout 🚀",
+    "channel": "telegram",
+    "timestamp": "2025-11-14T16:45:00Z",
+    "isFromUser": true,
+    "context": "crypto group chat"
+  },
+  {
+    "content": "how's the token doing?",
+    "channel": "telegram",
+    "timestamp": "2025-11-14T16:50:00Z",
+    "isFromUser": false,
+    "context": "crypto group chat"
+  },
+  {
+    "content": "honestly i don't check the price anymore lol. i just care about the protocol working. the token is a mechanism not a speculation",
+    "channel": "telegram",
+    "timestamp": "2025-11-14T16:52:00Z",
+    "isFromUser": true,
+    "context": "crypto group chat"
+  },
+  {
+    "content": "yeah but what's the wallet situation?",
+    "channel": "telegram",
+    "timestamp": "2025-11-14T16:53:00Z",
+    "isFromUser": false,
+    "context": "crypto group chat"
+  },
+  {
+    "content": "wallet works great! the mortality pool auto-transfers on trigger. tested it like 50 times on devnet. solana makes this so clean ✨",
+    "channel": "telegram",
+    "timestamp": "2025-11-14T16:55:00Z",
+    "isFromUser": true,
+    "context": "crypto group chat"
+  },
+  {
+    "content": "do you think agents will replace apps?",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-16T11:00:00Z",
+    "isFromUser": false,
+    "context": "tech discussion"
+  },
+  {
+    "content": "yeah 100%. apps are just interfaces, agents are intention. you tell it what you want and it figures out the how. that's the whole point",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-16T11:02:00Z",
+    "isFromUser": true,
+    "context": "tech discussion"
+  },
+  {
+    "content": "like right now i'm building this with typescript and honestly the DX is incredible. types catch everything before runtime",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-16T11:03:00Z",
+    "isFromUser": true,
+    "context": "tech discussion"
+  },
+  {
+    "content": "shipped the encryption layer today! AES-256 for the vault. your action plans are encrypted at rest, nobody can read them 🔒",
+    "channel": "discord",
+    "timestamp": "2025-11-18T20:10:00Z",
+    "isFromUser": true,
+    "context": "dev channel update"
+  },
+  {
+    "content": "how's your weekend going?",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-23T14:00:00Z",
+    "isFromUser": false,
+    "context": "casual weekend chat"
+  },
+  {
+    "content": "amazing tbh! went for a long walk, got coffee, now i'm back to building. this is what i love about weekends — no meetings just flow state 💫",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-23T14:05:00Z",
+    "isFromUser": true,
+    "context": "casual weekend chat"
+  },
+  {
+    "content": "you work too much lol",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-23T14:06:00Z",
+    "isFromUser": false,
+    "context": "casual weekend chat"
+  },
+  {
+    "content": "nah this doesn't feel like work!! when you're building something you actually believe in it's just... play? idk how to explain it",
+    "channel": "whatsapp",
+    "timestamp": "2025-11-23T14:08:00Z",
+    "isFromUser": true,
+    "context": "casual weekend chat"
+  },
+  {
+    "content": "i think the best code comes from people who actually care about the problem they're solving. you can't fake that energy",
+    "channel": "discord",
+    "timestamp": "2025-11-25T09:30:00Z",
+    "isFromUser": true,
+    "context": "dev philosophy discussion"
+  },
+  {
+    "content": "got the persona analysis working!! feed it your message history and it learns your vibe — formality, emoji usage, humor style, everything 🧠",
+    "channel": "telegram",
+    "timestamp": "2025-11-27T18:20:00Z",
+    "isFromUser": true,
+    "context": "project update"
+  },
+  {
+    "content": "isn't that creepy?",
+    "channel": "telegram",
+    "timestamp": "2025-11-27T18:22:00Z",
+    "isFromUser": false,
+    "context": "project update"
+  },
+  {
+    "content": "honestly no? you're choosing to do it. consent-first everything. and the AI always labels itself with a candle emoji so nobody gets confused",
+    "channel": "telegram",
+    "timestamp": "2025-11-27T18:24:00Z",
+    "isFromUser": true,
+    "context": "project update"
+  },
+  {
+    "content": "the ethics matter more than the code tbh. if you build something like this without guardrails you're just making a deepfake factory",
+    "channel": "telegram",
+    "timestamp": "2025-11-27T18:25:00Z",
+    "isFromUser": true,
+    "context": "project update"
+  },
+  {
+    "content": "anyone tried the new defi protocol on solana?",
+    "channel": "telegram",
+    "timestamp": "2025-11-29T12:00:00Z",
+    "isFromUser": false,
+    "context": "crypto group"
+  },
+  {
+    "content": "yeah i looked at it! the architecture is clean but i'm not gonna ape in lol. gotta actually read the code first, learned that lesson the hard way 😅",
+    "channel": "telegram",
+    "timestamp": "2025-11-29T12:05:00Z",
+    "isFromUser": true,
+    "context": "crypto group"
+  },
+  {
+    "content": "what music do you code to?",
+    "channel": "discord",
+    "timestamp": "2025-12-01T21:00:00Z",
+    "isFromUser": false,
+    "context": "offtopic chat"
+  },
+  {
+    "content": "lately it's been a lot of ambient and dnb. four tet, burial, goldie. something about those textures just puts my brain in the right mode for code",
+    "channel": "discord",
+    "timestamp": "2025-12-01T21:03:00Z",
+    "isFromUser": true,
+    "context": "offtopic chat"
+  },
+  {
+    "content": "also been making my own beats when i need a break from code. nothing serious just vibes 🎵",
+    "channel": "discord",
+    "timestamp": "2025-12-01T21:05:00Z",
+    "isFromUser": true,
+    "context": "offtopic chat"
+  },
+  {
+    "content": "just realized the agent framework could work for way more than legacy stuff. like imagine an agent that manages your whole crypto portfolio based on rules you set while you sleep",
+    "channel": "telegram",
+    "timestamp": "2025-12-03T08:30:00Z",
+    "isFromUser": true,
+    "context": "morning thoughts"
+  },
+  {
+    "content": "but nah i'm staying focused. one thing at a time. afterself first, world domination later lol",
+    "channel": "telegram",
+    "timestamp": "2025-12-03T08:32:00Z",
+    "isFromUser": true,
+    "context": "morning thoughts"
+  },
+  {
+    "content": "have you thought about what happens if the agent makes a mistake?",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-05T15:00:00Z",
+    "isFromUser": false,
+    "context": "serious conversation about safety"
+  },
+  {
+    "content": "yeah all the time honestly. that's why there's an escalation protocol — it doesn't just trigger on its own. it contacts your trusted people first and asks them",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-05T15:03:00Z",
+    "isFromUser": true,
+    "context": "serious conversation about safety"
+  },
+  {
+    "content": "and if even ONE person says you're alive it stands down immediately. safety bias always. false negatives over false positives",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-05T15:04:00Z",
+    "isFromUser": true,
+    "context": "serious conversation about safety"
+  },
+  {
+    "content": "i think about legacy a lot. not in a morbid way. more like... what do you leave behind? what matters?",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-07T23:15:00Z",
+    "isFromUser": true,
+    "context": "late night thoughts"
+  },
+  {
+    "content": "for me it's the connections. the people. the code is just a vehicle for making sure those connections don't just vanish",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-07T23:17:00Z",
+    "isFromUser": true,
+    "context": "late night thoughts"
+  },
+  {
+    "content": "that's deep",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-07T23:18:00Z",
+    "isFromUser": false,
+    "context": "late night thoughts"
+  },
+  {
+    "content": "haha yeah sorry i get philosophical after midnight 😄 anyway gonna go listen to some music and crash. talk tomorrow!",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-07T23:20:00Z",
+    "isFromUser": true,
+    "context": "late night thoughts"
+  },
+  {
+    "content": "new build shipped! the heartbeat protocol is fully working now. it pings you, waits, escalates, confirms. the whole loop 🔄",
+    "channel": "discord",
+    "timestamp": "2025-12-09T19:00:00Z",
+    "isFromUser": true,
+    "context": "dev channel update"
+  },
+  {
+    "content": "tested the vault encryption end to end and it's solid. AES-256-GCM with scrypt key derivation. your secrets are safe 🔐",
+    "channel": "discord",
+    "timestamp": "2025-12-09T19:05:00Z",
+    "isFromUser": true,
+    "context": "dev channel update"
+  },
+  {
+    "content": "how do you stay motivated on a solo project?",
+    "channel": "discord",
+    "timestamp": "2025-12-11T10:00:00Z",
+    "isFromUser": false,
+    "context": "community chat"
+  },
+  {
+    "content": "honestly? i think about the person who needs this and doesn't know it yet. someone out there is gonna set this up and it's gonna give them peace of mind. that's enough motivation for me",
+    "channel": "discord",
+    "timestamp": "2025-12-11T10:05:00Z",
+    "isFromUser": true,
+    "context": "community chat"
+  },
+  {
+    "content": "also coffee. lots of coffee ☕ lol",
+    "channel": "discord",
+    "timestamp": "2025-12-11T10:06:00Z",
+    "isFromUser": true,
+    "context": "community chat"
+  },
+  {
+    "content": "what's your take on the solana vs ethereum debate?",
+    "channel": "telegram",
+    "timestamp": "2025-12-13T14:00:00Z",
+    "isFromUser": false,
+    "context": "crypto debate"
+  },
+  {
+    "content": "i think they solve different problems and that's fine! solana is fast and cheap which is perfect for what i need. the token transfers are basically instant",
+    "channel": "telegram",
+    "timestamp": "2025-12-13T14:03:00Z",
+    "isFromUser": true,
+    "context": "crypto debate"
+  },
+  {
+    "content": "but ethereum has the ecosystem depth. honestly i'm not tribal about chains, i just use what works for the use case 🤷",
+    "channel": "telegram",
+    "timestamp": "2025-12-13T14:05:00Z",
+    "isFromUser": true,
+    "context": "crypto debate"
+  },
+  {
+    "content": "the mortality pool concept is wild btw — it's basically a tontine on solana. everyone holds tokens, when someone's switch triggers their tokens flow to the pool. the living inherit",
+    "channel": "telegram",
+    "timestamp": "2025-12-13T14:08:00Z",
+    "isFromUser": true,
+    "context": "crypto debate"
+  },
+  {
+    "content": "are you coming to the hackathon this weekend?",
+    "channel": "discord",
+    "timestamp": "2025-12-15T09:00:00Z",
+    "isFromUser": false,
+    "context": "event planning"
+  },
+  {
+    "content": "yeah gonna be there! thinking of demoing afterself. wanna show people the ghost mode — the persona analysis is actually really cool to watch in real time",
+    "channel": "discord",
+    "timestamp": "2025-12-15T09:05:00Z",
+    "isFromUser": true,
+    "context": "event planning"
+  },
+  {
+    "content": "love when a deploy just works first try. no errors, no rollbacks, just clean 🧹✨",
+    "channel": "discord",
+    "timestamp": "2025-12-17T22:00:00Z",
+    "isFromUser": true,
+    "context": "late night deploy"
+  },
+  {
+    "content": "gonna be real with you, i think this project is the most important thing i've ever built. not because of the tech but because of what it means for people",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-19T20:00:00Z",
+    "isFromUser": true,
+    "context": "personal reflection"
+  },
+  {
+    "content": "i feel that",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-19T20:02:00Z",
+    "isFromUser": false,
+    "context": "personal reflection"
+  },
+  {
+    "content": "like imagine you could tell your mom one last thing. or your best friend. or post one final message that says exactly what you wanted to say. that's what this does",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-19T20:03:00Z",
+    "isFromUser": true,
+    "context": "personal reflection"
+  },
+  {
+    "content": "the typescript codebase is getting really clean. strict mode everywhere, proper types, no any. feels good to build something solid from the start",
+    "channel": "discord",
+    "timestamp": "2025-12-21T16:30:00Z",
+    "isFromUser": true,
+    "context": "dev channel"
+  },
+  {
+    "content": "what's your new year's resolution?",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-30T18:00:00Z",
+    "isFromUser": false,
+    "context": "new years chat"
+  },
+  {
+    "content": "ship afterself to mainnet, grow the community, and honestly just keep building things that matter. also learn piano lol 🎹",
+    "channel": "whatsapp",
+    "timestamp": "2025-12-30T18:05:00Z",
+    "isFromUser": true,
+    "context": "new years chat"
+  },
+  {
+    "content": "the agent ecosystem is gonna explode in 2026 i can feel it. everyone's building agents now but the ones that stick will be the ones solving real problems",
+    "channel": "telegram",
+    "timestamp": "2026-01-02T11:00:00Z",
+    "isFromUser": true,
+    "context": "2026 predictions"
+  },
+  {
+    "content": "just added voice cloning support with elevenlabs! ghost mode can now literally speak in your voice. the future is here and it's kinda beautiful 🎙️",
+    "channel": "discord",
+    "timestamp": "2026-01-05T19:30:00Z",
+    "isFromUser": true,
+    "context": "feature announcement"
+  },
+  {
+    "content": "how does the token work?",
+    "channel": "telegram",
+    "timestamp": "2026-01-07T13:00:00Z",
+    "isFromUser": false,
+    "context": "token explanation"
+  },
+  {
+    "content": "simple! you hold the token, your agent watches for check-ins. if your switch triggers your tokens go to the mortality pool. the pool redistributes to everyone still around. it's a collective bet on life ✨",
+    "channel": "telegram",
+    "timestamp": "2026-01-07T13:05:00Z",
+    "isFromUser": true,
+    "context": "token explanation"
+  },
+  {
+    "content": "think of it like a tontine but on chain. transparent, automatic, no middlemen. solana makes the transfers instant and basically free",
+    "channel": "telegram",
+    "timestamp": "2026-01-07T13:07:00Z",
+    "isFromUser": true,
+    "context": "token explanation"
+  },
+  {
+    "content": "been listening to this aphex twin playlist on repeat while debugging the escalation protocol lol. something about ambient techno and state machines just clicks",
+    "channel": "discord",
+    "timestamp": "2026-01-09T23:00:00Z",
+    "isFromUser": true,
+    "context": "late night coding"
+  },
+  {
+    "content": "honestly the hardest part isn't the code it's the ethics. every feature needs to pass the 'would i be comfortable with this being used on me' test",
+    "channel": "whatsapp",
+    "timestamp": "2026-01-11T10:30:00Z",
+    "isFromUser": true,
+    "context": "ethics discussion"
+  },
+  {
+    "content": "that's a good framework",
+    "channel": "whatsapp",
+    "timestamp": "2026-01-11T10:32:00Z",
+    "isFromUser": false,
+    "context": "ethics discussion"
+  },
+  {
+    "content": "yeah and if the answer is no you don't build it. period. no amount of cool tech justifies eroding trust or consent",
+    "channel": "whatsapp",
+    "timestamp": "2026-01-11T10:33:00Z",
+    "isFromUser": true,
+    "context": "ethics discussion"
+  },
+  {
+    "content": "the ghost mode kill switch is non-negotiable btw. anyone in the contact list can say 'stop' and it shuts down immediately. the living always come first",
+    "channel": "whatsapp",
+    "timestamp": "2026-01-11T10:35:00Z",
+    "isFromUser": true,
+    "context": "ethics discussion"
+  },
+  {
+    "content": "another build shipped!! the whole setup flow is conversational now — you just tell your agent 'set up afterself' and it walks you through everything 🛠️",
+    "channel": "discord",
+    "timestamp": "2026-01-14T17:45:00Z",
+    "isFromUser": true,
+    "context": "feature ship"
+  },
+  {
+    "content": "gonna take a break and go touch grass. been coding for like 8 hours straight lol. the screen is starting to talk back to me 😂",
+    "channel": "telegram",
+    "timestamp": "2026-01-16T18:00:00Z",
+    "isFromUser": true,
+    "context": "break time"
+  },
+  {
+    "content": "do you ever worry about building something related to death?",
+    "channel": "whatsapp",
+    "timestamp": "2026-01-18T21:00:00Z",
+    "isFromUser": false,
+    "context": "deep conversation"
+  },
+  {
+    "content": "honestly no. i think not talking about it is the weird part. everyone's gonna die and literally nobody has their digital life in order. i'd rather build the tool than pretend the problem doesn't exist",
+    "channel": "whatsapp",
+    "timestamp": "2026-01-18T21:03:00Z",
+    "isFromUser": true,
+    "context": "deep conversation"
+  },
+  {
+    "content": "plus it's not really about death. it's about what you leave behind for the people you love. that's a beautiful thing to work on tbh",
+    "channel": "whatsapp",
+    "timestamp": "2026-01-18T21:05:00Z",
+    "isFromUser": true,
+    "context": "deep conversation"
+  }
+]

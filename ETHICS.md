@@ -75,6 +75,24 @@ We take this seriously.
 
 ---
 
+## Safety Chain — Executor Activation
+
+Afterself never acts on a single signal. The executor can only activate through a multi-step safety chain, each step requiring independent confirmation:
+
+```
+heartbeat miss → warning period → escalation → majority vote → trigger
+```
+
+1. **Heartbeat miss** — the owner stops responding to check-ins
+2. **Warning period** — a configurable grace period (default: 24h) before anyone is contacted
+3. **Escalation** — trusted contacts are individually asked to confirm the owner's status
+4. **Majority vote** — a majority of contacts must confirm absence. A single "alive" confirmation from anyone overrides all "absent" votes and immediately stands down
+5. **Trigger** — only after all of the above does the executor begin
+
+This chain is intentionally biased toward false negatives (not triggering when someone is gone) over false positives (triggering when someone is alive). A false negative is inconvenient. A false positive is catastrophic.
+
+---
+
 ## What We Will Never Build
 
 - A ghost that hides the fact it's AI
