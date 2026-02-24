@@ -14,14 +14,13 @@ Built on [OpenClaw](https://github.com/openclaw/openclaw). Local-first. Encrypte
 ## Install
 
 ```bash
-# Install from ClawHub
-clawhub install afterself
+# Install from npm
+npm install afterself
 
 # Or clone and install locally
-git clone https://github.com/afterself/afterself
+git clone https://github.com/cruellacodes/afterself
 cd afterself
 npm install && npm run build
-# Copy to your OpenClaw skills directory
 ```
 
 ## Setup

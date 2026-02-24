@@ -20,13 +20,17 @@
     "ai-agent",
     "estate",
     "persona",
-    "voice-clone"
+    "voice-clone",
+    "solana",
+    "mortality-pool",
+    "tontine",
+    "executor"
   ],
   "author": "afterself",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/afterself/afterself"
+    "url": "https://github.com/cruellacodes/afterself"
   },
   "homepage": "https://afterself.xyz",
   "dependencies": {
