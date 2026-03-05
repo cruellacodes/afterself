@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afterself Panic | Text a Code. Pick Up Cash.</title>
+<link rel="icon" type="image/png" href="logo-transparent.png">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f0eb;
+    --cream: #e8e0d6;
+    --warm: #c4a882;
+    --glow: #e8c47c;
+    --dim: #6b6560;
+    --faint: #2a2725;
+    --accent: #e0b580;
+    --panic: #e05050;
+    --panic-glow: rgba(224,80,80,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    line-height: 1.65;
+  }
+
+  ::selection { background: var(--panic); color: var(--white); }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* Nav */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.75rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+    background: rgba(10,10,10,0.6);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+  }
+
+  .logo img { height: 120px; width: 120px; object-fit: contain; }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+  .nav-links a.active { color: var(--panic); }
+
+  .nav-cta {
+    background: var(--white) !important;
+    color: var(--black) !important;
+    padding: 0.55rem 1.4rem;
+    border-radius: 100px;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    font-size: 0.85rem !important;
+    transition: transform 0.2s, box-shadow 0.3s !important;
+  }
+
+  .nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(224,80,80,0.25);
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12rem 2rem 4rem;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(224,80,80,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(224,80,80,0.2);
+    border-radius: 100px;
+    font-size: 0.78rem;
+    color: var(--panic);
+    margin-bottom: 3rem;
+    letter-spacing: 0.03em;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .hero-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--panic);
+    animation: pulse 1.5s ease infinite;
+  }
+
+  .hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+    animation: fadeUp 0.8s ease 0.1s both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--panic);
+  }
+
+  .hero-sub {
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    color: var(--dim);
+    max-width: 560px;
+    margin-bottom: 3rem;
+    animation: fadeUp 0.8s ease 0.2s both;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    animation: fadeUp 0.8s ease 0.3s both;
+  }
+
+  .btn-panic {
+    background: var(--panic);
+    color: var(--white);
+    padding: 0.85rem 2.2rem;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid var(--panic);
+  }
+
+  .btn-panic:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(224,80,80,0.35);
+  }
+
+  .btn-dark {
+    background: var(--black);
+    color: var(--white);
+    padding: 0.85rem 2.2rem;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .btn-dark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    border-color: rgba(255,255,255,0.2);
+  }
+
+  /* Sections */
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--panic);
+    margin-bottom: 1.5rem;
+  }
+
+  /* How it works — 3-step cards */
+  .how {
+    padding: 6rem 3rem 8rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .how-header {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 400;
+    margin-bottom: 4rem;
+  }
+
+  .how-header em { font-style: italic; color: var(--panic); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    counter-reset: step;
+  }
+
+  .step-card {
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 2.5rem;
+    background: rgba(255,255,255,0.015);
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+    counter-increment: step;
+  }
+
+  .step-card:hover {
+    border-color: rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.03);
+    transform: translateY(-4px);
+  }
+
+  .step-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--panic-glow);
+    filter: blur(80px);
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+  }
+
+  .step-card:hover::after { opacity: 1; }
+
+  .step-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--panic);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .step-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    background: rgba(224,80,80,0.12);
+  }
+
+  .step-card h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+  }
+
+  .step-card p {
+    color: var(--dim);
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* Scenario */
+  .scenario {
+    padding: 2rem 3rem 8rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .scenario-box {
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 3rem 3.5rem;
+    background: rgba(255,255,255,0.015);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scenario-box::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--panic-glow);
+    filter: blur(100px);
+    pointer-events: none;
+  }
+
+  .scenario-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--panic);
+    margin-bottom: 1.5rem;
+  }
+
+  .scenario-flow {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .scenario-step {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .scenario-step .num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(224,80,80,0.15);
+    color: var(--panic);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    flex-shrink: 0;
+  }
+
+  .scenario-arrow {
+    color: var(--dim);
+    font-size: 1.2rem;
+  }
+
+  /* Security / Why it works */
+  .security {
+    padding: 8rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .security-header {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 400;
+    margin-bottom: 4rem;
+  }
+
+  .security-header em { font-style: italic; color: var(--panic); }
+
+  .security-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .security-card {
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 2.5rem;
+    background: rgba(255,255,255,0.015);
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .security-card:hover {
+    border-color: rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.03);
+    transform: translateY(-4px);
+  }
+
+  .security-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--panic-glow);
+    filter: blur(80px);
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+  }
+
+  .security-card:hover::after { opacity: 1; }
+
+  .security-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    background: rgba(224,80,80,0.12);
+  }
+
+  .security-card h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+  }
+
+  .security-card p {
+    color: var(--dim);
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* Get Started */
+  .install {
+    padding: 8rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .install-header {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+
+  .install-header em { font-style: italic; color: var(--panic); }
+
+  .install-sub {
+    color: var(--dim);
+    font-size: 1.05rem;
+    max-width: 520px;
+    margin: 0 auto 3.5rem;
+    line-height: 1.7;
+  }
+
+  .install-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: left;
+    counter-reset: install-step;
+  }
+
+  .install-step {
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    counter-increment: install-step;
+  }
+
+  .install-step::before {
+    content: '0' counter(install-step);
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--panic);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .install-step h4 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+
+  .install-step p {
+    color: var(--dim);
+    font-size: 0.85rem;
+    line-height: 1.65;
+  }
+
+  .install-cta {
+    margin-top: 3.5rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  footer span { font-size: 0.78rem; color: var(--dim); }
+
+  footer .footer-links { display: flex; gap: 2rem; }
+
+  footer a {
+    font-size: 0.78rem;
+    color: var(--dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  footer a:hover { color: var(--white); }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { padding: 6rem 1.5rem 3rem; }
+    .how { padding: 5rem 1.5rem; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .scenario { padding: 2rem 1.5rem 5rem; }
+    .scenario-box { padding: 2rem 1.5rem; }
+    .scenario-flow { flex-direction: column; align-items: flex-start; }
+    .scenario-arrow { transform: rotate(90deg); }
+    .security { padding: 5rem 1.5rem; }
+    .security-grid { grid-template-columns: 1fr; }
+    .install { padding: 5rem 1.5rem; }
+    .install-steps { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <img src="logo-transparent.png" alt="Afterself">
+  </a>
+  <div class="nav-links">
+    <a href="index.html#modes">Modes</a>
+    <a href="index.html#how">How it Works</a>
+    <a href="index.html#pool">Pool</a>
+    <a href="index.html#ethics">Ethics</a>
+    <a href="panic.html" class="active">Panic</a>
+    <a href="https://github.com/cruellacodes/afterself" target="_blank">GitHub</a>
+    <a href="https://pump.fun/coin/CMJ78xLUnJjcvLRteqQm6YBe7HFKN3N3xx8hutFzpump" target="_blank" class="nav-cta">Buy $SELF</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">
+    <div class="dot"></div>
+    SMS to cash. Anywhere.
+  </div>
+  <h1>Text a code.<br>Pick up <em>cash</em>.</h1>
+  <p class="hero-sub">
+    Preauthorize a transfer while you have internet.
+    When you don't, text one word. Walk into any Western Union with your ID. Pick up cash in local currency.
+  </p>
+  <div class="hero-actions">
+    <a href="#setup" class="btn-panic">Get Started</a>
+    <a href="https://github.com/cruellacodes/afterself" target="_blank" class="btn-dark">View Source</a>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="section-label">How It Works</div>
+  <h2 class="how-header">Three steps from <em>crypto</em> to cash in hand.</h2>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-number">01</div>
+      <div class="step-icon">&#9998;</div>
+      <h3>Set up once</h3>
+      <p>While you have internet, choose an amount, a recipient name, and a secret code. Your SOL is preauthorized to move. You sign it on your own device.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-number">02</div>
+      <div class="step-icon">&#9993;</div>
+      <h3>Text your code</h3>
+      <p>No internet? No app? No problem. Send a single SMS with your emergency code. Works from any phone that can text, even a borrowed one.</p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-number">03</div>
+      <div class="step-icon">&#128176;</div>
+      <h3>Pick up cash</h3>
+      <p>You receive Western Union pickup details by SMS. Walk into any WU location worldwide, show your ID, and collect cash in local currency.</p>
+    </div>
+  </div>
+</section>
+
+<section class="scenario">
+  <div class="scenario-box">
+    <div class="scenario-label">Real scenario</div>
+    <div class="scenario-flow">
+      <div class="scenario-step">
+        <span class="num">1</span>
+        <span>War zone. No internet.</span>
+      </div>
+      <span class="scenario-arrow">&rarr;</span>
+      <div class="scenario-step">
+        <span class="num">2</span>
+        <span>Text <strong>ESCAPE</strong> to +1&thinsp;877&thinsp;780&thinsp;4236</span>
+      </div>
+      <span class="scenario-arrow">&rarr;</span>
+      <div class="scenario-step">
+        <span class="num">3</span>
+        <span>SOL converts to cash</span>
+      </div>
+      <span class="scenario-arrow">&rarr;</span>
+      <div class="scenario-step">
+        <span class="num">4</span>
+        <span>WU pickup details arrive by SMS</span>
+      </div>
+      <span class="scenario-arrow">&rarr;</span>
+      <div class="scenario-step">
+        <span class="num">5</span>
+        <span>Walk in. Show ID. Cash in hand.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="security" id="security">
+  <div class="section-label">Why It Works</div>
+  <h2 class="security-header">Built for the <em>worst</em> day of your life.</h2>
+
+  <div class="security-grid">
+    <div class="security-card">
+      <div class="security-icon">&#128241;</div>
+      <h3>No app needed</h3>
+      <p>Works with any phone that can send a text. No internet connection, no wallet app, no QR codes. Just SMS.</p>
+    </div>
+
+    <div class="security-card">
+      <div class="security-icon">&#128274;</div>
+      <h3>Your keys stay yours</h3>
+      <p>You sign the transaction on your own device during setup. The server stores only presigned bytes, never your private key.</p>
+    </div>
+
+    <div class="security-card">
+      <div class="security-icon">&#10005;</div>
+      <h3>One code, one transfer</h3>
+      <p>Each code works exactly once. After use, the nonce advances and the transaction can never be replayed.</p>
+    </div>
+
+    <div class="security-card">
+      <div class="security-icon">&#8986;</div>
+      <h3>Rate limited</h3>
+      <p>One attempt every 60 seconds. Brute force is impractical. Every attempt, success or failure, is logged.</p>
+    </div>
+
+    <div class="security-card">
+      <div class="security-icon">&#127758;</div>
+      <h3>400,000 pickup locations</h3>
+      <p>150+ countries. In the handful of places where WU/MoneyGram doesn't exist, we connect you with a local peer to peer contact for a direct cash meetup.</p>
+    </div>
+
+    <div class="security-card">
+      <div class="security-icon">&#9745;</div>
+      <h3>Full audit trail</h3>
+      <p>Every setup, verification, execution, and failure is logged with timestamps. Nothing happens silently.</p>
+    </div>
+  </div>
+</section>
+
+<section class="install" id="setup">
+  <div class="section-label">Get Started</div>
+  <h2 class="install-header">Three steps to <em>peace of mind</em>.</h2>
+  <p class="install-sub">Register your phone, preauthorize your transfer, and memorize your code. That's it.</p>
+
+  <div class="install-steps">
+    <div class="install-step">
+      <h4>Create your account</h4>
+      <p>Register with your phone number. It's stored as a hash, we never see the actual number. Takes 30 seconds.</p>
+    </div>
+    <div class="install-step">
+      <h4>Pre-authorize your transfer</h4>
+      <p>Choose how much SOL to convert, your recipient name for Western Union, and a secret emergency code. Sign once on your device.</p>
+    </div>
+    <div class="install-step">
+      <h4>Memorize your code</h4>
+      <p>That's it. When you need cash, text your code. Western Union pickup details arrive by SMS. Walk in, show ID, collect cash.</p>
+    </div>
+  </div>
+
+  <div class="install-cta">
+    <a href="https://github.com/cruellacodes/afterself" target="_blank" class="btn-panic">View on GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; 2026 Afterself. Open source under MIT.</span>
+  <div class="footer-links">
+    <a href="https://github.com/cruellacodes/afterself" target="_blank">GitHub</a>
+    <a href="index.html">Afterself</a>
+    <a href="#">Docs</a>
+  </div>
+  <span style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--dim);letter-spacing:0.02em;">CA: CMJ78xLUnJjcvLRteqQm6YBe7HFKN3N3xx8hutFzpump</span>
+</footer>
+
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+
+</body>
+</html>

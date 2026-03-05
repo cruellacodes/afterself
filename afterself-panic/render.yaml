@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: afterself-panic
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: node dist/hosted-server.js
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: PORT
+        value: "3141"
+      - key: ESCROW_ADDRESS
+        sync: false
+      - key: ADMIN_SECRET
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_FROM_NUMBER
+        sync: false

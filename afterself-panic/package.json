@@ -1,0 +1,50 @@
+{
+  "name": "afterself-panic",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "SMS-triggered emergency SOL transfer. No internet required.",
+  "bin": {
+    "afterself-panic": "./dist/cli.js",
+    "afterself-panic-sms": "./dist/sms-webhook.js",
+    "afterself-panic-server": "./dist/hosted-server.js"
+  },
+  "main": "./dist/panic.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/hosted-server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "solana",
+    "panic-button",
+    "emergency",
+    "sms",
+    "crypto",
+    "transfer",
+    "dead-mans-switch",
+    "afterself"
+  ],
+  "author": "afterself",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cruellacodes/afterself"
+  },
+  "homepage": "https://afterself.xyz/panic.html",
+  "dependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "express": "^4.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^22.0.0",
+    "@types/express": "^4.17.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

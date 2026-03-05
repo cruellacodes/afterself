@@ -42,6 +42,7 @@ export interface AfterselfConfig {
   ghost: GhostConfig;
   llm: LLMConfig;
   mortalityPool: MortalityPoolConfig;
+  panic: PanicConfig;
 }
 
 export interface HeartbeatConfig {
@@ -140,6 +141,35 @@ export interface MortalityPoolConfig {
   rpcUrl: string;
   /** Nudge user to buy token if balance is 0 */
   nudgeEnabled: boolean;
+}
+
+// -----------------------------------------------------------
+// Panic Button
+// -----------------------------------------------------------
+
+export interface PanicAction {
+  /** Human-readable label (e.g. "wife", "brother", "burn") */
+  label: string;
+  /** SHA-256 hash of the secret emergency code */
+  codeHash: string;
+  /** Destination Solana wallet address (or burn address) */
+  destination: string;
+  /** Asset type */
+  asset: "sol";
+  /** When this action was configured */
+  createdAt: string;
+}
+
+export interface PanicConfig {
+  enabled: boolean;
+  /** Emergency actions mapped to hashed codes (max 5) */
+  actions: PanicAction[];
+  /** SHA-256 hash of registered phone number (for SMS verification) */
+  phoneHash?: string;
+  /** Seconds between allowed attempts (rate limiting) */
+  cooldownSeconds: number;
+  /** Timestamp of last verify attempt */
+  lastAttempt?: string;
 }
 
 // -----------------------------------------------------------
@@ -314,7 +344,7 @@ export interface EscalationResponse {
 export interface AuditEntry {
   id: string;
   timestamp: string;
-  type: "heartbeat" | "escalation" | "executor" | "ghost" | "config" | "mortality" | "error";
+  type: "heartbeat" | "escalation" | "executor" | "ghost" | "config" | "mortality" | "panic" | "error";
   action: string;
   details: Record<string, unknown>;
   success: boolean;
